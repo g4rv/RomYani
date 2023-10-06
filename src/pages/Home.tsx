@@ -1,7 +1,7 @@
 const Home = () => {
 	return (
-		<section className="min-h-screen p-4 py-8">
-			<div className="flex min-h-full h-full flex-col items-center justify-center gap-10 rounded-2xl bg-white/10  backdrop-blur">
+		<section className="h-[100dvh] p-4 py-8">
+			<div className="flex h-full flex-col items-center justify-center gap-10 rounded-2xl bg-white/10  backdrop-blur">
 				<h1 className="font-noto text-5xl">Обери себе:</h1>
 				<div className="flex flex-col items-center gap-3">
 					<a

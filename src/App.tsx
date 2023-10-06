@@ -9,11 +9,11 @@ import GreetingsLayout from './layouts/GreetingsLayout';
 const App = () => {
     return (
         <Routes>
-			<Route path='g4rv.github.io/RomYani/*' element={<MainLayout />}>
+			<Route path='/RomYani/*' element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="g4rv.github.io/RomYani/:bunny/test" element={<Tests />} />
+				<Route path="/RomYani/:bunny/test" element={<Tests />} />
 			</Route>
-            <Route path='g4rv.github.io/RomYani/:bunny/greeting' element={<GreetingsLayout />}>
+            <Route path='/RomYani/:bunny/greeting' element={<GreetingsLayout />}>
 				<Route index element={<Greeting />} />
 			</Route>
 		</Routes>

@@ -15,24 +15,30 @@ const Popup: FC<PopupProps> = ({ isOpened, title, testState }) => {
 		if (isOpened) {
 			dialogRef.current?.showModal();
 			document.body.style.overflow = "hidden";
-		} else {
-			document.body.style.overflow = "visible";
 		}
 	}, [isOpened]);
 
+	const handleConfirmPopup = (path: string) => {
+		document.body.style.overflow = "visible";
+		navigate(path);
+	};
+
 	return (
-		<dialog ref={dialogRef} className="p-4 rounded-xl">
-			<p className="text-xl font-bold mb-8 text-center">{title}</p>
+		<dialog ref={dialogRef} className="rounded-xl p-4">
+			<p className="mb-8 text-center text-xl font-bold">{title}</p>
 			<div className="flex flex-col items-center gap-4">
 				{testState === "failed" ? (
-					<button className="px-2 py-1 border border-black rounded-2xl" onClick={() => navigate("/RomYani/")}>
+					<button
+						className="rounded-2xl border border-black px-2 py-1"
+						onClick={() => handleConfirmPopup("/RomYani/")}
+					>
 						Переобрати себе
 					</button>
 				) : null}
 				<button
-                    className="px-2 py-1 border border-black rounded-2xl" 
+					className="rounded-2xl border border-black px-2 py-1"
 					onClick={() =>
-						navigate(
+						handleConfirmPopup(
 							`${location.pathname.slice(
 								0,
 								location.pathname.lastIndexOf("/"),
@@ -40,7 +46,13 @@ const Popup: FC<PopupProps> = ({ isOpened, title, testState }) => {
 						)
 					}
 				>
-					{testState === 'failed' ? `Сірьога, дурень, це я - ${location.pathname.includes('roma') ? 'Рома' : 'Яна'}!` : 'Продовжити'}
+					{testState === "failed"
+						? `Сірьога, дурень, це я - ${
+								location.pathname.includes("roma")
+									? "Рома"
+									: "Яна"
+						  }!`
+						: "Продовжити"}
 				</button>
 			</div>
 		</dialog>

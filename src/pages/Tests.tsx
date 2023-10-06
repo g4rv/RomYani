@@ -81,7 +81,10 @@ const Tests = () => {
 		setTestState(() => (testsScore < tests.length ? "failed" : "passed"));
 		console.log(testsScore);
 	};
+    useEffect(() => {
+        window.scrollTo(0, 0)
 
+    }, [])
 	useEffect(() => {
 		setTestsScore(
 			tests.reduce(

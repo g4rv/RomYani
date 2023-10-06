@@ -11,7 +11,7 @@ const App = () => {
         <Routes>
 			<Route path='/RomYani/*' element={<MainLayout />}>
 				<Route index element={<Home />} />
-				<Route path="/RomYani/:bunny/test" element={<Tests />} />
+				<Route path=":bunny/test" element={<Tests />} />
 			</Route>
             <Route path='/RomYani/:bunny/greeting' element={<GreetingsLayout />}>
 				<Route index element={<Greeting />} />

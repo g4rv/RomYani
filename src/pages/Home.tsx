@@ -5,14 +5,14 @@ const Home = () => {
 				<h1 className="font-noto text-5xl">Обери себе:</h1>
 				<div className="flex flex-col items-center gap-3">
 					<a
-						href="/roma/test"
+						href="/RomYani/roma/test"
 						className="neonText font-nuni text-4xl"
 					>
 						Рома
 					</a>
 					<div className="mt-1 w-full border-b-2 border-cyan-50" />
 					<a
-						href="/yana/test"
+						href="/RomYani/yana/test"
 						className="neonText font-nuni text-4xl"
 					>
 						Яна

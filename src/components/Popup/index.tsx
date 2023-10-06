@@ -25,7 +25,7 @@ const Popup: FC<PopupProps> = ({ isOpened, title, testState }) => {
 			<p className="text-xl font-bold mb-8 text-center">{title}</p>
 			<div className="flex flex-col items-center gap-4">
 				{testState === "failed" ? (
-					<button className="px-2 py-1 border border-black rounded-2xl" onClick={() => navigate("/")}>
+					<button className="px-2 py-1 border border-black rounded-2xl" onClick={() => navigate("/RomYani/")}>
 						Переобрати себе
 					</button>
 				) : null}

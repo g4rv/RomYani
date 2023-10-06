@@ -9,11 +9,11 @@ import GreetingsLayout from './layouts/GreetingsLayout';
 const App = () => {
     return (
         <Routes>
-			<Route path='/RomYani/*' element={<MainLayout />}>
+			<Route path='/*' element={<MainLayout />}>
 				<Route index element={<Home />} />
 				<Route path=":bunny/test" element={<Tests />} />
 			</Route>
-            <Route path='/RomYani/:bunny/greeting' element={<GreetingsLayout />}>
+            <Route path='/:bunny/greeting' element={<GreetingsLayout />}>
 				<Route index element={<Greeting />} />
 			</Route>
 		</Routes>

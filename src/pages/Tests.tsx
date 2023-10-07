@@ -39,7 +39,7 @@ const yanaTest: TestsArr = [
 		answers: [
 			"Матієнко",
 			"Царинок",
-			"Кирешун",
+			"Киришун",
 			"Тебе",
 		],
 		correctAnswer: "Матієнко",
@@ -52,7 +52,7 @@ const yanaTest: TestsArr = [
 		currAnswer: "",
 	},
 	{
-		question: "Яка у вас з дівчатами була олюблена гра на днях народження?",
+		question: "Яка у вас з дівчатами була улюблена гра на днях народження?",
 		answers: ["Квач", "Вампір", "Заморозка", "Сліпак"],
 		correctAnswer: "Сліпак",
 		currAnswer: "",

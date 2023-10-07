@@ -35,21 +35,26 @@ const romaTest: TestsArr = [
 
 const yanaTest: TestsArr = [
 	{
-		question: "1",
-		answers: ["1", "2", "3", "4"],
-		correctAnswer: "1",
+		question: "Кого називали русалкой?",
+		answers: [
+			"Матієнко",
+			"Царинок",
+			"Кирешун",
+			"Тебе",
+		],
+		correctAnswer: "Матієнко",
 		currAnswer: "",
 	},
 	{
-		question: "3",
-		answers: ["1", "2", "3", "4"],
-		correctAnswer: "3",
+		question: "На якому уроці я відрубився, що по завершенню мене довелося будити?",
+		answers: ["Географія", "Історія", "Зарубіжна", "Математика"],
+		correctAnswer: "Історія",
 		currAnswer: "",
 	},
 	{
-		question: "2",
-		answers: ["1", "2", "3", "4"],
-		correctAnswer: "2",
+		question: "Яка у вас з дівчатами була олюблена гра на днях народження?",
+		answers: ["Квач", "Вампір", "Заморозка", "Сліпак"],
+		correctAnswer: "Сліпак",
 		currAnswer: "",
 	},
 ];
@@ -81,10 +86,9 @@ const Tests = () => {
 		setTestState(() => (testsScore < tests.length ? "failed" : "passed"));
 		console.log(testsScore);
 	};
-    useEffect(() => {
-        window.scrollTo(0, 0)
-
-    }, [])
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	useEffect(() => {
 		setTestsScore(
 			tests.reduce(

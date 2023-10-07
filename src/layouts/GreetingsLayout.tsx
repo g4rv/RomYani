@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import SixNine from "../ui/SixNine";
 
 const GreetingsLayout = () => {
 	return (
@@ -7,13 +8,14 @@ const GreetingsLayout = () => {
 			<section className="flex flex-col gap-16 p-6">
 				<Outlet />
 				<div className="rounded-xl border border-black/10 bg-gray-500/10 px-4 py-6 backdrop-blur-xl">
-					<p>
+					<p className="font-nuni mb-10">
 						Я так і не вигадав куди це приліпить, тому просто
 						вставлю як є...
 					</p>
-					<div>
-						<p>Займіться!</p>
-						<p>69</p>
+					<div className="flex flex-col gap-2 items-center">
+						<p className="font-nuni text-2xl">Займіться!</p>
+                        <SixNine/>
+                        <p className="text-2xl">💋</p>
 					</div>
 				</div>
 			</section>
